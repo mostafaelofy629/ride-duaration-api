@@ -34,6 +34,8 @@ jobs:
       
       - name: Install pre-commit
         run: |
+          apt-get update
+          apt-get install -y git
           python -m pip install --upgrade pip
           pip install pre-commit
       - name: Run pre-commit hooks
